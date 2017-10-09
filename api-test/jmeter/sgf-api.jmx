@@ -133,6 +133,7 @@
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="User" enabled="false"/>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get All users" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
@@ -142,7 +143,6 @@
                   </elementProp>
                 </collectionProp>
               </elementProp>
-              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <stringProp name="HTTPSampler.domain">${serverIp}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
@@ -170,6 +170,7 @@
               <hashTree/>
             </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create user" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
@@ -190,7 +191,6 @@
                   </elementProp>
                 </collectionProp>
               </elementProp>
-              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <stringProp name="HTTPSampler.domain">${serverIp}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
@@ -266,6 +266,7 @@ vars.put(&quot;userUrl&quot;, user._links.self.href);</stringProp>
               <hashTree/>
             </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Modify  user" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
@@ -284,7 +285,6 @@ vars.put(&quot;userUrl&quot;, user._links.self.href);</stringProp>
                   </elementProp>
                 </collectionProp>
               </elementProp>
-              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <stringProp name="HTTPSampler.domain"></stringProp>
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
@@ -320,6 +320,7 @@ vars.put(&quot;userUrl&quot;, user._links.self.href);</stringProp>
               <hashTree/>
             </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Modify  userPassword" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
@@ -331,7 +332,6 @@ vars.put(&quot;userUrl&quot;, user._links.self.href);</stringProp>
                   </elementProp>
                 </collectionProp>
               </elementProp>
-              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <stringProp name="HTTPSampler.domain"></stringProp>
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
@@ -359,6 +359,7 @@ vars.put(&quot;userUrl&quot;, user._links.self.href);</stringProp>
               <hashTree/>
             </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get all company users" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
@@ -368,7 +369,6 @@ vars.put(&quot;userUrl&quot;, user._links.self.href);</stringProp>
                   </elementProp>
                 </collectionProp>
               </elementProp>
-              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <stringProp name="HTTPSampler.domain">${serverIp}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
@@ -396,6 +396,7 @@ vars.put(&quot;userUrl&quot;, user._links.self.href);</stringProp>
               <hashTree/>
             </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add user to company" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
@@ -417,7 +418,6 @@ vars.put(&quot;userUrl&quot;, user._links.self.href);</stringProp>
                   </elementProp>
                 </collectionProp>
               </elementProp>
-              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <stringProp name="HTTPSampler.domain"></stringProp>
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.protocol"></stringProp>
@@ -1067,7 +1067,7 @@ vars.put(&quot;driverUrl&quot;, driver._links.self.href);</stringProp>
   &quot;cif&quot;: &quot;companicif${RandomValue}&quot;,&#xd;
   &quot;email&quot;: &quot;string@domain.local&quot;,&#xd;
   &quot;id&quot;: null,&#xd;
-  &quot;name&quot;: &quot;string&quot;,&#xd;
+  &quot;name&quot;: &quot;name${RandomValue}&quot;,&#xd;
   &quot;phones&quot;: [&#xd;
     &quot;string&quot;&#xd;
   ],&#xd;
@@ -1123,7 +1123,7 @@ vars.put(&quot;companyUrl&quot;, company._links.self.href);</stringProp>
               </JSR223PostProcessor>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Modify  company" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Modify  company" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -1133,7 +1133,7 @@ vars.put(&quot;companyUrl&quot;, company._links.self.href);</stringProp>
   &quot;cif&quot;: &quot;newcompanicif${RandomValue}&quot;,&#xd;
   &quot;email&quot;: &quot;newstring@domain.local&quot;,&#xd;
   &quot;id&quot;: null,&#xd;
-  &quot;name&quot;: &quot;newstring&quot;,&#xd;
+  &quot;name&quot;: &quot;newstring${RandomValue}&quot;,&#xd;
   &quot;phones&quot;: [&#xd;
     &quot;newstring&quot;&#xd;
   ],&#xd;
